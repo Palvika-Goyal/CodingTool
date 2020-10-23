@@ -1,2 +1,33 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+#include<iostream>
+using namespace std;
+class AREA
+{
+    float L,B,a;
+public:
+    void setValue(float l,float b)
+    {
+        L=l;
+        B=b;
+    }
+    void process()
+    {
+        a=L*B;
+    }
+    float getArea()
+    {
+        return(a);
+    }
+};
+int main()
+{
+    float L,B;
+    AREA rect;
+    cout<<"enter length and breadth:";
+    cin>>L>>B;
+    rect.setValue(L,B);
+    rect.process();
+    float area=rect.getArea();
+    cout<<"\narea="<<area;
+}
